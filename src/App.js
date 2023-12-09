@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignupPage from './pages/Signup.js';
 import LoginPage from './pages/Login.js';
 import Home from './pages/Home.js';
+import ManageAudios from './pages/ManageAudios.js';
 import './index.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<LoginPage/>} />
             <Route path="/signup" element={<SignupPage/>} />
             <Route path="/home" element={<Home />} />
+            <Route path="/manage-audios" element={<ManageAudios/>} />
         </Routes>
       </Router>
     </div>

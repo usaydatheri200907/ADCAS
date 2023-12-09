@@ -1,15 +1,17 @@
+import ManageAudios from "../pages/ManageAudios";
+import {Link} from "react-router-dom";
 function Sidebar() {
   return (
     <div className="bg-blue h-screen fixed">
       <div className="bg-blue-800 fixed top-16 left-0 right-auto">
         <div className="flex h-screen bg-blue-100">
-          <div className="bg-blue-100 lg:flex md:w-64 md:flex-col max-h-screen overflow-y-auto">
+          <div className="bg-blue-50 lg:flex md:w-64 md:flex-col max-h-screen overflow-y-auto">
           <div className="flex-col pt-5 flex overflow-y-auto">
               <div className="h-full flex-col justify-between px-4 flex">
                 <div className="space-y-4">
                   <div className="bg-top bg-cover space-y-1">
-                    <a
-                      href="#"
+                    <Link
+                      href="/dashboard"
                       className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 flex transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                     >
                       <span className="justify-left items-left flex">
@@ -29,12 +31,12 @@ function Sidebar() {
                         </svg>
                       </span>
                       <span>Dashboard</span>
-                    </a>
+                    </Link>
                     <p className=" p-4 px-4 font-semibold text-xs tracking-widest text-gray-400 uppercase mt-5 mb-5 ">
                       Manage
                     </p>
-                    <a
-                      href="#"
+                    <Link
+                      to="/manage-audios"  // Set the path to your ManageAudios component
                       className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                     >
                       <span className="justify-center items-center fixed">
@@ -64,7 +66,7 @@ function Sidebar() {
                         ></svg>
                       </span>
                       <span>Manage Audios</span>
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <p className="px-4 font-semibold text-xs tracking-widest text-gray-400 uppercase">
@@ -73,7 +75,7 @@ function Sidebar() {
                     <div className="mt-4 bg-top bg-cover space-y-1">
                       <a
                         href="#"
-                        className="font-medium text-sm rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                        className="font-medium text-sm rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                       >
                         <span className="relative items-left justify-center">
                           <span>Patients' Data</span>
@@ -81,7 +83,7 @@ function Sidebar() {
                       </a>
                       <a
                         href="#"
-                        className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                        className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                       >
                         <span className="justify-left items-left fixed">
                           <svg
@@ -120,7 +122,7 @@ function Sidebar() {
                       <a
                         href="#"
                         className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex
-                            transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                            transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                       >
                         <span className="justify-center items-center flex"></span>
                         <span>Statistics</span>
@@ -141,7 +143,7 @@ function Sidebar() {
                       <a
                         href="#"
                         className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex
-                            transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                            transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                       >
                         <span className="justify-center items-center fixed">
                           <svg
@@ -171,7 +173,7 @@ function Sidebar() {
                       <a
                         href="#"
                         className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 flex
-                            transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                            transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                       >
                         <span className="justify-center items-center fixed">
                           <svg
@@ -221,7 +223,7 @@ function Sidebar() {
                       </a>
                       <a
                         href="#"
-                        className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                        className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                       >
                         <svg
                           className="flex-shrink-0 w-5 h-5 mr-4"
@@ -246,7 +248,7 @@ function Sidebar() {
                     <a
                       href="#"
                       className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex
-                          transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                          transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                     >
                       <span className="items-center justify-center fixed">
                         <svg
@@ -280,7 +282,7 @@ function Sidebar() {
                     <a
                       href="#"
                       className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex
-                          transition-all duration-200 hover:bg-gray-200 group cursor-pointer"
+                          transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                     >
                       <span className="items-center justify-center fixed">
                         <svg

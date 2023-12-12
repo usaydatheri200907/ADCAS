@@ -4,9 +4,7 @@ import {
   CalendarIcon,
   CheckIcon,
   ChevronDownIcon,
-  CurrencyDollarIcon,
   LinkIcon,
-  MapPinIcon,
   PencilIcon,
 } from "@heroicons/react/20/solid";
 import { Menu, Transition } from "@headlessui/react";
@@ -15,13 +13,19 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Example({
+  patientID,
+  patientName,
+  patientAge,
+  patientGender,
+  patientDate,
+}) {
   return (
     <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
       <div className="lg:absolute lg:items-left lg:justify-left top-16 left-64 ml-10 mt-10 space-y-5">
       <div className="min-w-1 flex-2">
         <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-          Patient 1
+          Patient {patientID}
         </h2>
         <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
           <div className="mt-2 flex items-center text-sm text-gray-500">
@@ -39,17 +43,17 @@ export default function Example() {
                 d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
               />
             </svg>
-            <strong>Usayd Ather</strong>{" "}
+            <strong>{patientName}</strong>{" "}
           </div>
           <div className="mt-2 flex items-center text-sm text-gray-500">
-            <strong>Age/Gender:</strong> 21/male
+            <strong>Age/Gender:</strong>{patientAge}/{patientGender}
           </div>
           <div className="mt-2 flex items-center text-sm text-gray-500">
             <CalendarIcon
               className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
               aria-hidden="true"
             />
-            Dated: 01/12/2023
+            Dated: {patientDate}
           </div>
         </div>
       </div>

@@ -4,6 +4,8 @@ import SignupPage from './pages/Signup.js';
 import LoginPage from './pages/Login.js';
 import Home from './pages/Home.js';
 import ManageAudios from './pages/ManageAudios.js';
+import AddAudio from './pages/AddAudio.js';
+import AssistantLogin from './pages/AssistantLogin.js';
 import './index.css';
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
             <Route path="/signup" element={<SignupPage/>} />
             <Route path="/home" element={<Home />} />
             <Route path="/manage-audios" element={<ManageAudios/>} />
+            <Route path="/add-new-audio" element={<AddAudio/>} />
+            <Route path="/assistant-login" element={<AssistantLogin/>} />
         </Routes>
       </Router>
     </div>

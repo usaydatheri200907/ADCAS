@@ -7,16 +7,16 @@ export default function LoginPage() {
     return (
         <>
         <Header
-                heading="Doctor's Portal"
+                heading="Assistant's Portal"
                 paragraph="Don't have an account yet? "
                 linkName="Signup"
                 linkUrl="/signup"
                 />
                 <Login/>
                 <Link 
-                to="../assistant-login">
+                to="../assistantLogin">
                 <Button
-                placeholder={"Assistant? Login here"}
+                placeholder={"Doctor? Login here"}
                 />
                 </Link>
         </>

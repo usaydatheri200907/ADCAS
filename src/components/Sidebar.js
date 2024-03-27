@@ -1,10 +1,17 @@
 import ManageAudios from "../pages/ManageAudios";
 import {Link} from "react-router-dom";
-function Sidebar() {
+function Sidebar({
+  manage,
+  linkUrl,
+  manage2,
+  linkurl2,
+  manage3,
+  linkurl3,
+}) {
   return (
-    <div className="bg-blue h-screen fixed">
-      <div className="bg-blue-800 fixed top-16 left-0 right-auto">
-        <div className="flex h-screen bg-blue-100">
+    <div className="bg-cyan h-screen fixed top-8 left-0 right-auto overflow-y-auto">
+      <div className="bg-cyan-800">
+        <div className="flex h-screen bg-cyan-100">
           <div className="bg-blue-50 lg:flex md:w-64 md:flex-col max-h-screen overflow-y-auto">
           <div className="flex-col pt-5 flex overflow-y-auto">
               <div className="h-full flex-col justify-between px-4 flex">
@@ -36,7 +43,7 @@ function Sidebar() {
                       Manage
                     </p>
                     <Link
-                      to="/manage-audios"  // Set the path to your ManageAudios component
+                      to={linkUrl}  // Set the path to your ManageAudios component
                       className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
                     >
                       <span className="justify-center items-center fixed">
@@ -65,7 +72,71 @@ function Sidebar() {
                           stroke-width="2"
                         ></svg>
                       </span>
-                      <span>Manage Audios</span>
+                      <span>{manage}</span>
+                    </Link>
+                    <Link
+                      to={linkurl2}  // Set the path to your ManageAudios component
+                      className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
+                    >
+                      <span className="justify-center items-center fixed">
+                        <svg
+                          className="mr-4"
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                        <path
+                          d="M17 9L13.9558 13.5662C13.5299 14.2051 12.5728 14.1455 12.2294 13.4587L11.7706 12.5413C11.4272 11.8545 10.4701 11.7949 10.0442 12.4338L7 17"
+                          stroke="#4F4F4F"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <svg
+                          x="3"
+                          y="3"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          stroke="#4F4F4F"
+                          stroke-width="2"
+                        ></svg>
+                      </span>
+                      <span>{manage2}</span>
+                    </Link>
+                    <Link
+                      to={linkurl3}  // Set the path to your ManageAudios component
+                      className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
+                    >
+                      <span className="justify-center items-center fixed">
+                        <svg
+                          className="mr-4"
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                        <path
+                          d="M17 9L13.9558 13.5662C13.5299 14.2051 12.5728 14.1455 12.2294 13.4587L11.7706 12.5413C11.4272 11.8545 10.4701 11.7949 10.0442 12.4338L7 17"
+                          stroke="#4F4F4F"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <svg
+                          x="3"
+                          y="3"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          stroke="#4F4F4F"
+                          stroke-width="2"
+                        ></svg>
+                      </span>
+                      <span>{manage3}</span>
                     </Link>
                   </div>
                   <div>
@@ -80,58 +151,6 @@ function Sidebar() {
                         <span className="relative items-left justify-center">
                           <span>Patients' Data</span>
                         </span>
-                      </a>
-                      <a
-                        href="#"
-                        className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
-                      >
-                        <span className="justify-left items-left fixed">
-                          <svg
-                            className="mr-4 mt-0"
-                            width="24"
-                            height="24"
-                            viewbox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          />
-                          <path
-                            d="M6.90112 11.8461C7.55156 9.56955 9.63235 8 12 8V8C14.3676 8 16.4484 9.56954 17.0989 11.8461L17.6571 13.7998C17.8843 14.5951 18.2336 15.3504 18.6924 16.0386L18.8012 16.2018C18.9408 16.4111 19.0105 16.5158 19.045 16.5932C19.3105 17.1894 18.943 17.8759 18.2997 17.9857C18.2162 18 18.0904 18 17.8388 18H6.16116C5.90958 18 5.78379 18 5.70027 17.9857C5.05697 17.8759 4.68952 17.1894 4.955 16.5932C4.98947 16.5158 5.05924 16.4111 5.19879 16.2018L5.30758 16.0386C5.76642 15.3504 6.11569 14.5951 6.34293 13.7998L6.90112 11.8461Z"
-                            fill="#4F4F4F"
-                          />
-                          <path
-                            d="M11 9L12 3"
-                            stroke="#4F4F4F"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                          />
-                          <path
-                            d="M13 9L12 3"
-                            stroke="#4F4F4F"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                          />
-                          <path
-                            d="M12.5 21H11.5"
-                            stroke="#4F4F4F"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                          />
-                        </span>
-                        <span>Alerts</span>
-                      </a>
-                      <a
-                        href="#"
-                        className="font-medium text-sm items-center rounded-lg text-gray-900 px-4 py-2.5 flex
-                            transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
-                      >
-                        <span className="justify-center items-center flex"></span>
-                        <span>Statistics</span>
-                        {/* <span
-                              className="px-2 py-0.5 items-right font-semibold text-xs ml-auto bg-indigo-50 text-indigo-600
-                              rounded-full uppercase border border-indigo-300 inline-flex"
-                            >
-                              New
-                            </span> */}
                       </a>
                     </div>
                   </div>

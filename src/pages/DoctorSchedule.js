@@ -1,24 +1,23 @@
 import Navbar from "../components/Navbar";
 import React from "react";
 import Sidebar from "../components/Sidebar";
-import PageHeadings from "../components/PatientAudiosCards";
-import Button from "../components/Button";
-import NewPatientForm from "../components/NewPatientForm";
+import Calander from "../components/Calander";
 
 const Home = () => {
     return (
         <>
         <Navbar 
-        title="Doctor's Portal"
+        title="Doctors's Portal"
         />
         <Sidebar 
         manage="Manage Audios"
         linkUrl="/manage-audios"
         manage2="Manage Schedule"
-        linkurl2="/doctor-schedule"/>
-        <NewPatientForm/>
-        </>
-    );
+        linkurl2="/doctor-schedule"
+        />
+        <Calander
+        linkurl="/doctor-appointments"/>
+        </>    );
 };
 
 export default Home;

@@ -8,8 +8,15 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <>
-        <Navbar />
-        <Sidebar />
+        <Navbar 
+        title="Doctor's Portal"
+        />
+        <Sidebar 
+        manage="Manage Audios"
+        linkUrl="/manage-audios"
+        manage2="Manage Schedule"
+        linkurl2="/doctor-schedule"
+        />
         <div classname="mt-10">
             <PageHeadings
              patientID={1}
@@ -22,6 +29,13 @@ const Home = () => {
             patientID={2}
             patientName={"Muhammad Awais"}
             patientAge={21}
+            patientGender={"male"}
+            patientDate={"2021-06-17"}
+            />
+            <PageHeadings
+            patientID={3}
+            patientName={"Saad Shafiq"}
+            patientAge={22}
             patientGender={"male"}
             patientDate={"2021-06-17"}
             />

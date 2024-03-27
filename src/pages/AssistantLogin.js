@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import Login from "../components/Login"
+import AssistantLogin from "../components/AssistantLogin"
 import Button from "../components/Button"
 import { Link } from "react-router-dom";
 
@@ -12,9 +12,9 @@ export default function LoginPage() {
                 linkName="Signup"
                 linkUrl="/signup"
                 />
-                <Login/>
+                <AssistantLogin/>
                 <Link 
-                to="../assistantLogin">
+                to="../">
                 <Button
                 placeholder={"Doctor? Login here"}
                 />

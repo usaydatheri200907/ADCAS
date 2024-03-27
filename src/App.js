@@ -6,6 +6,15 @@ import Home from './pages/Home.js';
 import ManageAudios from './pages/ManageAudios.js';
 import AddAudio from './pages/AddAudio.js';
 import AssistantLogin from './pages/AssistantLogin.js';
+import AssistantHome from './pages/AssistantHome.js';
+import ManageSchedule from './pages/ManageSchedule.js';
+import ManageTasksAssistant from './pages/AssistantTasks.js';
+import AddAppointment from './pages/AddAppointment.js';
+import DoctorSchedule from './pages/DoctorSchedule.js';
+import DoctorAppointments from './pages/DoctorAppointments.js';
+import TranscribeLiveAudio from './pages/TranscribeLiveAudio.js';
+import ManagePatients from './pages/ManagePatients.js';
+import AddPatientForm from './pages/AddPatient.js';
 import './index.css';
 
 function App() {
@@ -20,6 +29,15 @@ function App() {
             <Route path="/manage-audios" element={<ManageAudios/>} />
             <Route path="/add-new-audio" element={<AddAudio/>} />
             <Route path="/assistant-login" element={<AssistantLogin/>} />
+            <Route path="/assistant-home" element={<AssistantHome/>} />
+            <Route path="/manage-schedule" element={<ManageSchedule/>} />
+            <Route path="/manage-tasks" element={<ManageTasksAssistant/>} />
+            <Route path="/add-appointment" element={<AddAppointment/>} />
+            <Route path="/doctor-schedule" element={<DoctorSchedule/>} />
+            <Route path="/doctor-appointments" element={<DoctorAppointments/>} />
+            <Route path="/add-live-audio" element={<TranscribeLiveAudio/>} />
+            <Route path="/manage-patients" element={<ManagePatients/>} />
+            <Route path="/add-patient-form" element={<AddPatientForm/>} />
         </Routes>
       </Router>
     </div>

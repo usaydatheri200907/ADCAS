@@ -6,15 +6,13 @@ const Home = () => {
     return (
         <>
         <Navbar 
-        title="Doctor's Portal"
+        title="Assistant's Portal"
         />
         <Sidebar 
-        manage="Manage Audios"
-        linkUrl="/manage-audios"
-        manage2="Manage Schedule"
-        linkurl3="/add-live-audio"
-        manage3="Transcribe Live Audio"
-        />
+        manage="Manage Schedule"
+        linkUrl="/manage-schedule"
+        manage2="Manage Patients"
+        linkurl2="/manage-patients"/>
         </>
     );
 };

@@ -1,5 +1,3 @@
-// AudioUploader.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -13,22 +11,22 @@ function AudioUploader() {
 
   const handleSubmit = async () => {
     const formData = new FormData();
-    formData.append('audio', file);
+    formData.append('file', file);
 
     try {
-      const response = await axios.post('/upload', formData, {
+      const response = await axios.post('http://localhost:3001/transcribe', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      setTranscript(response.data.transcript);
+      setTranscript(response.data.transcription);
     } catch (error) {
       console.error('Error:', error);
     }
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg ml-20">
+    <div className="container mx-auto p-6 bg-white rounded-lg shadow-lg overflow-auto">
       <input 
         type="file" 
         onChange={handleFileChange} 
@@ -40,9 +38,13 @@ function AudioUploader() {
       >
         Upload
       </button>
-      <div>
+      <div className="overflow-auto">
         <h2 className="text-xl font-semibold mb-2">Transcript:</h2>
-        <p className="text-gray-800">{transcript}</p>
+        <textarea 
+          value={transcript} 
+          readOnly 
+          className="w-full h-32 p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-400 resize-y"
+        />
       </div>
     </div>
   )

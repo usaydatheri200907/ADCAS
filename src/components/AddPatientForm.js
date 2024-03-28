@@ -14,7 +14,7 @@ const AddPatientForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/patients/add", {
+      const response = await axios.post("http://localhost:3001/patients/add", {
         name,
         age,
         gender,
@@ -30,10 +30,14 @@ const AddPatientForm = () => {
         throw new Error("Failed to add patient");
       }
       console.log("New patient added:", response.data);
-      navigate("/manage-patients");
+      navigate("/manage-patients"); // Redirect to manage-patients page
     } catch (error) {
       console.error("Error adding patient:", error.message);
     }
+  };
+
+  const handleCancel = () => {
+    navigate("/manage-patients"); // Redirect to manage-patients page
   };
 
   return (
@@ -132,6 +136,13 @@ const AddPatientForm = () => {
           >
             Add Patient
           </button>
+          <button
+            className="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+            onClick={handleCancel}
+          >
+            Cancel
+          </button>
         </div>
       </form>
     </div>
@@ -139,3 +150,9 @@ const AddPatientForm = () => {
 };
 
 export default AddPatientForm;
+
+
+
+
+
+

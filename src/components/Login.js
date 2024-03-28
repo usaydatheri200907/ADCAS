@@ -4,34 +4,61 @@ import { loginFields } from "../constants/formFields";
 import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
+import axios from 'axios';
 
-const fields=loginFields;
+const fields = loginFields;
 let fieldsState = {};
-fields.forEach(field=>fieldsState[field.id]='');
+fields.forEach(field => fieldsState[field.id] = '');
 
-export default function Login(){
-    const [loginState,setLoginState]=useState(fieldsState);
-    const navigate = useNavigate(); 
-    
-    const handleChange=(e)=>{
-        setLoginState({...loginState,[e.target.id]:e.target.value})
+export default function Login() {
+    const [loginState, setLoginState] = useState(fieldsState);
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        setLoginState({ ...loginState, [e.target.id]: e.target.value })
     }
 
-    const handleSubmit=(e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
         authenticateUser();
     }
 
-    //Handle Login API Integration here
-    const authenticateUser = () =>{
+    // Handle Login API Integration here
+    const authenticateUser = async () => {
+        // try {
+        //     const doctorResponse = await axios.post('http://localhost:3001/doctor/login', {
+        //         email: loginState.email,
+        //         password: loginState.password
+        //     });
+        //     if (doctorResponse.status === 200) {
+        //         navigate('/home');
+        //         return;
+        //     }
+        // } catch (doctorError) {
+        //     console.error('Doctor login failed:', doctorError);
+        // }
+
+        // try {
+        //     const assistantResponse = await axios.post('http://localhost:3001/assistant/login', {
+        //         email: loginState.email,
+        //         password: loginState.password
+        //     });
+        //     if (assistantResponse.status === 200) {
+        //         navigate('/home');
+        //     } else {
+        //         console.error('Assistant login failed');
+        //     }
+        // } catch (assistantError) {
+        //     console.error('Assistant login failed:', assistantError);
+        // }
         navigate('/home');
     }
 
-    return(
+    return (
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-        <div className="-space-y-px">
-            {
-                fields.map(field=>
+            <div className="-space-y-px">
+                {
+                    fields.map(field =>
                         <Input
                             key={field.id}
                             handleChange={handleChange}
@@ -43,15 +70,15 @@ export default function Login(){
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
-                    />
-                
-                )
-            }
-        </div>
+                        />
 
-        <FormExtra/>
-        <FormAction handleSubmit={handleSubmit} text="Login"/>
+                    )
+                }
+            </div>
 
-      </form>
+            <FormExtra />
+            <FormAction handleSubmit={handleSubmit} text="Login" />
+
+        </form>
     )
 }

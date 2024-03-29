@@ -18,8 +18,7 @@ const PatientsTable = () => {
   };
 
   return (
-    <div className="flex flex-col mt-8 ml-20">
-      <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg flex-grow">
+      <div className="shadow  border-b border-gray-400 sm:rounded-lg flex-grow">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
@@ -65,7 +64,6 @@ const PatientsTable = () => {
           </tbody>
         </table>
       </div>
-    </div>
   );
 };
 

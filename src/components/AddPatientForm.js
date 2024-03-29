@@ -11,7 +11,7 @@ const AddPatientForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/patients/", { name, age, gender });
+      const response = await axios.post("http://localhost:3001/patients/add", { name, age, gender });
       console.log("New patient added:", response.data);
       navigate("/manage-patients");
     } catch (error) {
@@ -20,9 +20,9 @@ const AddPatientForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Add New Patient</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="max-w-md mx-auto md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+      <h2 className="text-2xl font-bold mb-4 text-center">Add New Patient</h2>
+      <form onSubmit={handleSubmit} className="w-full">
 
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -69,7 +69,7 @@ const AddPatientForm = () => {
             <option value="Other">Other</option>
           </select>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"

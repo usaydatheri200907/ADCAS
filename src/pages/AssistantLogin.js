@@ -10,11 +10,11 @@ export default function LoginPage() {
                 heading="Assistant's Portal"
                 paragraph="Don't have an account yet? "
                 linkName="Signup"
-                linkUrl="/signup"
+                linkUrl="/assistant/signup"
                 />
                 <AssistantLogin/>
                 <Link 
-                to="../">
+                to="/doctor/login">
                 <Button
                 placeholder={"Doctor? Login here"}
                 />

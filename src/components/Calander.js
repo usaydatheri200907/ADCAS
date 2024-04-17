@@ -33,7 +33,7 @@ export default function IndexPage() {
                 </h1>
               </div>
               <div className="flex items-center justify-between pt-12 overflow-x-auto">
-                <Link to="/manage-audios">
+                <Link to="/manage-tasks">
                   <Calendar
                     onChange={onChange}
                     value={date}

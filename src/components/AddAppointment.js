@@ -14,7 +14,7 @@ const AddAppointment = ({
     e.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:3000/appointments/add', {
+      const response = await fetch('http://localhost:3001/appointments/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,6 +85,7 @@ const AddAppointment = ({
         <button
           type="submit"
           className="bg-indigo-500 text-white p-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300"
+          onClick={handleSubmit}
         >
           Submit
         </button>

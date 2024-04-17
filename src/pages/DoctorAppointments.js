@@ -32,11 +32,13 @@ const AssistantTasks = () => {
     <>
       <Navbar title="Doctor's Portal" />
       <Sidebar 
-      manage="Manage Audios"
-      linkUrl="/manage-audios"
-      manage2="Manage Schedule"
-      linkurl2="/doctor-schedule" 
-      />
+        manage="Manage Audios"
+        linkUrl="/manage-audios"
+        manage2="Manage Schedule"
+        linkurl2="/doctor-schedule" 
+        linkurl3="/add-live-audio"
+        manage3="Transcribe Live Audio"
+        />
       <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-800 mb-4 ml-5">
         13 December 2023 - Friday
       </h1>

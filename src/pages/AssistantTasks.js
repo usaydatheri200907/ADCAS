@@ -7,15 +7,14 @@ import { Link } from "react-router-dom";
 
 const AssistantTasks = () => {
   const [appointments, setAppointments] = useState([]);
+  const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-    try {
+      try {
         const response = await fetch("http://localhost:3000/appointments/all");
-        console.log(response);
-       if (response.ok) {
+        if (response.ok) {
           const data = await response.json();
-          
           setAppointments(data);
         } else {
           console.error("Failed to fetch appointments");
@@ -26,14 +25,26 @@ const AssistantTasks = () => {
     };
 
     fetchData();
+
+    const date = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
+    setCurrentDate(formattedDate);
   }, []);
 
   return (
     <>
       <Navbar title="Assistant's Portal" />
-      <Sidebar manage="Manage Schedule" linkUrl="/manage-schedule" />
+      <Sidebar 
+        manage="Manage Audios"
+        linkUrl="/manage-audios"
+        manage2="Manage Schedule"
+        linkurl2="/doctor-schedule" 
+        linkurl3="/add-live-audio"
+        manage3="Transcribe Live Audio"
+      />
       <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-800 mb-4 ml-5">
-        13 December 2023 - Friday
+         {currentDate}
       </h1>
       {appointments.map((appointment) => (
         <Appointment

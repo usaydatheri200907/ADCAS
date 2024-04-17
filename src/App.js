@@ -17,6 +17,7 @@ import TranscribeLiveAudio from './pages/TranscribeLiveAudio.js';
 import ManagePatients from './pages/ManagePatients.js';
 import AddPatientForm from './pages/AddPatient.js';
 import './index.css';
+import AudioTranscription from './components/AudioTranscription.js';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/add-live-audio" element={<TranscribeLiveAudio/>} />
             <Route path="/manage-patients" element={<ManagePatients/>} />
             <Route path="/add-patient-form" element={<AddPatientForm/>} />
+            {/* <Route path="/livetranscription" element={<AudioTranscription/>} /> */}
         </Routes>
       </Router>
     </div>

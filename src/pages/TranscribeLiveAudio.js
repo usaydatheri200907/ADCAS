@@ -13,6 +13,8 @@ const TranscribeLiveAudio = () => {
         linkurl2="/doctor-schedule" 
         linkurl3="/add-live-audio"
         manage3="Transcribe Live Audio"
+        linkurl4="/manage-patients"
+                manage4="Manage Patients"
         />
       <AudioUploader />
     </>

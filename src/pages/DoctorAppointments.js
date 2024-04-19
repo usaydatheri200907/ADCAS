@@ -38,6 +38,8 @@ const AssistantTasks = () => {
         linkurl2="/doctor-schedule" 
         linkurl3="/add-live-audio"
         manage3="Transcribe Live Audio"
+        linkurl4="/manage-patients"
+                manage4="Manage Patients"
         />
       <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-800 mb-4 ml-5">
         13 December 2023 - Friday

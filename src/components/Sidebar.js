@@ -7,6 +7,8 @@ function Sidebar({
   linkurl2,
   manage3,
   linkurl3,
+  manage4,
+  linkurl4,
 }) {
   return (
     <div className="bg-cyan h-screen fixed top-8 left-0 right-auto overflow-y-auto">
@@ -137,6 +139,38 @@ function Sidebar({
                         ></svg>
                       </span>
                       <span>{manage3}</span>
+                    </Link>
+                    <Link
+                      to={linkurl4}  // Set the path to your ManageAudios component
+                      className="font-medium text-sm items-left rounded-lg text-gray-900 px-4 py-2.5 block transition-all duration-200 hover:bg-blue-200 group cursor-pointer"
+                    >
+                      <span className="justify-center items-center fixed">
+                        <svg
+                          className="mr-4"
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                        <path
+                          d="M17 9L13.9558 13.5662C13.5299 14.2051 12.5728 14.1455 12.2294 13.4587L11.7706 12.5413C11.4272 11.8545 10.4701 11.7949 10.0442 12.4338L7 17"
+                          stroke="#4F4F4F"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <svg
+                          x="3"
+                          y="3"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          stroke="#4F4F4F"
+                          stroke-width="2"
+                        ></svg>
+                      </span>
+                      <span>{manage4}</span>
                     </Link>
                   </div>
                   <div>

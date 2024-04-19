@@ -26,7 +26,7 @@ function App() {
     <div className="max-w-full w-full space-y-8 pl-14 pt-14">
      <Router>
         <Routes>
-            <Route path="/doctor/login" element={<LoginPage/>} />
+            <Route path="/" element={<LoginPage/>} />
             <Route path="/doctor/signup" element={<SignupPage/>} />
             <Route path="/home" element={<Home />} />
             <Route path="/manage-audios" element={<ManageAudios/>} />

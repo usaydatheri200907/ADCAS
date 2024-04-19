@@ -18,8 +18,6 @@ const Home = () => {
         linkurl2="/doctor-schedule" 
         linkurl3="/add-live-audio"
         manage3="Transcribe Live Audio"
-        linkurl4="/add-live-audio"
-        manage4="Transcribe Live Audio"
         />
         <div classname="mt-10">
             <PageHeadings

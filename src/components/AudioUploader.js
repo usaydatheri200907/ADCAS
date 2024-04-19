@@ -37,7 +37,7 @@ function AudioUploader() {
   };
 
   return (
-    <div className="pl-56 pt-10">
+    <div className="pl-56 pt-1 px-36">
     <div className="container mx-auto  p-6 bg-white rounded-lg shadow-lg overflow-auto w-full">
       <label 
         htmlFor="file-upload" 

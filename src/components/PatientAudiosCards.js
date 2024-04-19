@@ -22,7 +22,7 @@ export default function Example({
   patientDate,
 }) {
   return (
-    <div className="lg:grid lg:grid-cols-12 lg:gap-x-5">
+    <div className="lg:grid lg:grid-cols-12 lg:gap-x-5 pl-80">
       <div className="lg:flex lg:items-left lg:justify-left top-16 left-64 ml-10 mt-10 space-y-5">
       <div className="min-w-1 flex-2">
         <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">

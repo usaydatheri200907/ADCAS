@@ -8,7 +8,7 @@ const NotePad = () => {
   };
 
   return (
-    <div className="notepad-container ml-20 p-4 bg-white rounded-lg shadow-md">
+    <div className="notepad-container ml-20 p-4 bg-white rounded-lg shadow-md px-96 pt-96">
       <h3 className="text-lg font-semibold mb-2">Notifications and Reminders</h3>
       <textarea
         className="w-full h-32 p-2 border rounded-md focus:outline-none focus:border-blue-500"

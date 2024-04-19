@@ -12,7 +12,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className="top-20">
+      <div className="top-20 pl-96">
         <div className="fixed p-8 bottom-10 overflow-hidden">
           <div className="top-20 left-80 fixed mb-8">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-600">

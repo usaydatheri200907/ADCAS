@@ -40,7 +40,6 @@ const PatientsTable = () => {
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gender</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone Number</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
           </tr>
         </thead>
@@ -50,7 +49,6 @@ const PatientsTable = () => {
               <td className="px-6 py-4 whitespace-nowrap">{patient.name}</td>
               <td className="px-6 py-4 whitespace-nowrap">{patient.age}</td>
               <td className="px-6 py-4 whitespace-nowrap">{patient.gender}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{patient.phoneNumber}</td>
               <td className="px-6 py-4 whitespace-nowrap space-x-2">
                 {editingPatientId !== patient._id ? (
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleEdit(patient._id)}>Edit</button>

@@ -17,12 +17,13 @@ import TranscribeLiveAudio from './pages/TranscribeLiveAudio.js';
 import ManagePatients from './pages/ManagePatients.js';
 import AddPatientForm from './pages/AddPatient.js';
 import './index.css';
-import AudioTranscription from './components/AudioTranscription.js';
+import GenClinicalNote from './pages/GenClinicalNote.js';
+import AppointmentScheduling from './pages/Calendar.js';
 
 function App() {
   return (
-    <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-md w-full space-y-8">
+    <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-full w-full space-y-8 pl-14 pt-14">
      <Router>
         <Routes>
             <Route path="/doctor/login" element={<LoginPage/>} />
@@ -40,6 +41,8 @@ function App() {
             <Route path="/add-live-audio" element={<TranscribeLiveAudio/>} />
             <Route path="/manage-patients" element={<ManagePatients/>} />
             <Route path="/add-patient-form" element={<AddPatientForm/>} />
+            <Route path="/gen-clinical-note" element={<GenClinicalNote/>} />
+            <Route path="/appointmentsdash" element={<AppointmentScheduling/>} />
             {/* <Route path="/livetranscription" element={<AudioTranscription/>} /> */}
         </Routes>
       </Router>

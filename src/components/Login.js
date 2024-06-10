@@ -55,7 +55,7 @@ export default function Login() {
     }
 
     return (
-        <form className="mt-8 space-y-6 px-96" onSubmit={handleSubmit}>
+        <form className="mt-8 space-y-6 px-96 pt-20" onSubmit={handleSubmit}>
             <div className="-space-y-px">
                 {
                     fields.map(field =>
@@ -76,9 +76,13 @@ export default function Login() {
                 }
             </div>
 
+            <div className="px-64">
             <FormExtra />
-            <FormAction handleSubmit={handleSubmit} text="Login" />
+            </div>
+            <div className="px-80">
 
+            <FormAction handleSubmit={handleSubmit} text="Login" />
+</div>
         </form>
     )
 }

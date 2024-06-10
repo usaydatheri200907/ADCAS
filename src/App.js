@@ -22,7 +22,7 @@ import AppointmentScheduling from './pages/Calendar.js';
 
 function App() {
   return (
-    <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="">
     <div className="max-w-full w-full space-y-8 pl-14 pt-14">
      <Router>
         <Routes>

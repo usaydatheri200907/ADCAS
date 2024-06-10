@@ -27,11 +27,14 @@ function App() {
      <Router>
         <Routes>
             <Route path="/" element={<LoginPage/>} />
+            <Route path="/doctor/login" element={<LoginPage/>} />
             <Route path="/doctor/signup" element={<SignupPage/>} />
+            <Route path="/assistant/login" element={<AssistantLogin/>} />
+            <Route path="/assistant/signup" element={<SignupPage/>} />
+          
             <Route path="/home" element={<Home />} />
             <Route path="/manage-audios" element={<ManageAudios/>} />
             <Route path="/add-new-audio" element={<AddAudio/>} />
-            <Route path="/assistant/login" element={<AssistantLogin/>} />
             <Route path="/assistant-home" element={<AssistantHome/>} />
             <Route path="/manage-schedule" element={<ManageSchedule/>} />
             <Route path="/manage-tasks" element={<ManageTasksAssistant/>} />

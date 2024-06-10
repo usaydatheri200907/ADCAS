@@ -18,7 +18,8 @@ const Home = () => {
         linkurl4="/manage-patients"
                 manage4="Manage Patients"
         />
-      <AddPatientForm />
+        <div className="pt-20"><AddPatientForm /></div>
+      
     </>
   );
 };

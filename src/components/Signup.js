@@ -53,6 +53,7 @@ export default function Signup() {
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
       <div className="">
         {fields.map((field) => (
+          <div className="px-96">
           <Input
             key={field.id}
             handleChange={handleChange}
@@ -64,9 +65,13 @@ export default function Signup() {
             type={field.type}
             isRequired={field.isRequired}
             placeholder={field.placeholder}
-          />
+          /></div>
         ))}
+                  <div className="px-96">
+                  <div className="px-96">
         <FormAction handleSubmit={handleSubmit} text="Signup" />
+        </div>
+        </div>
       </div>
     </form>
   );

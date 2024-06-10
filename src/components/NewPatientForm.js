@@ -12,8 +12,8 @@ export default function Example() {
     navigate('/manage-patients');
   };
   return (
-    <div className="fixed top-8 p-8 bottom-10 overflow-hidden">
-      <form className=" max-h-screen overflow-y-auto">
+    <div className="fixed top-8 p-8 bottom-10 overflow-hidden pl-96 pt-20">
+      <form className=" max-h-screen overflow-y-auto pl-80 ">
         <div className="space-y-12 ml-8">
           <div className="border-b border-gray-900/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-gray-900">

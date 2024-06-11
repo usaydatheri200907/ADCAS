@@ -14,6 +14,9 @@ function ClinicalNoteGenerator() {
       setTranscript(location.state.transcript);
     }
     console.log(location.state);
+    console.log("kkkkk");
+    
+    console.log(transcript);
   }, [location]);
 
   const handleClinicalNoteGeneration = async () => {

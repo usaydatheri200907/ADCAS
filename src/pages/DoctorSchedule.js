@@ -21,7 +21,8 @@ const Home = () => {
         />
         <Calander
         linkurl="/doctor-appointments"/>
-        </>    );
+        </> 
+          );
 };
 
 export default Home;

@@ -45,9 +45,10 @@ const AssistantTasks = () => {
         linkurl4="/manage-patients"
                 manage4="Manage Patients"
       />
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-800 mb-4 ml-5">
+      <div className="pt-96 pl-96">
+      <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-800 mb-4 ml-5 pl-96">
          {currentDate}
-      </h1>
+      </h1></div>
       {appointments.map((appointment) => (
         <Appointment
           key={appointment._id} // Assuming there's an _id field in the appointment data

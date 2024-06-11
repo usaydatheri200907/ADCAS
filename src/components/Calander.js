@@ -11,7 +11,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className="top-20 pl-96">
+      <div className="top-20 pl-96 ">
         <div className="fixed p-8 bottom-10 overflow-hidden">
           <div className="top-20 left-80 fixed mb-8">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-600">
@@ -24,8 +24,8 @@ export default function IndexPage() {
               Today's Date: {date.toLocaleDateString()}
             </p>
           </div>
-          <div className="ml-10 mt-20 shadow-lg">
-            <div className="md:p-16 md:pb-12 p-5 dark:bg-gray-800 bg-white rounded-t top-30">
+          <div className="ml-10 mt-20 shadow-lg max-w-1/2 w-full space-y-8 pl-14 pt-14">
+            <div className="md:p-16 md:pb-12 p-5 dark:bg-gray-800 bg-white rounded-t top-30 ">
               <div className="px-4 flex items-center justify-between rounded-md">
                 <h1 className="text-2xl font-bold dark:text-gray-100 text-gray-800">
                   Scheduler
@@ -54,7 +54,7 @@ export default function IndexPage() {
               </div>
             </div>
           </div>
-        </div>
+          </div>
       </div>
     </>
   );
